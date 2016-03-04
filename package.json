@@ -6,6 +6,10 @@
     "start": "./node_modules/.bin/gulp"
   },
   "author": "Nikolay Gromov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicothin/stylelint-less-test.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "gulp": "github:gulpjs/gulp#4.0",
