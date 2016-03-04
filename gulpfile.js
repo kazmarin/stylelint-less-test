@@ -6,7 +6,7 @@ const postcssLess = require("postcss-less");
 const stylelint = require("stylelint");
 
 gulp.task("lint:less", function () {
-  return gulp.src("src/less/lint-test.less")
+  return gulp.src("style.less")
     .pipe(postcss([
       stylelint({
         "rules": {
