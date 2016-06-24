@@ -1,5 +1,8 @@
 {
   "syntax": "less",
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
   "rules": {
     "color-hex-case": "lower",
     "color-named": "never",
@@ -25,6 +28,61 @@
     "declaration-bang-space-before": "always",
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-colon-space-after": "always",
-    "declaration-colon-space-before": "never"
+    "declaration-colon-space-before": "never",
+    "declaration-no-important": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-ignored-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "declaration-block-semicolon-newline-after": true,
+    "declaration-block-single-line-max-declarations": 1,
+    "declaration-block-trailing-semicolon": "always",
+    "block-closing-brace-newline-after": "always",
+    "block-closing-brace-newline-before": "always",
+    "block-no-single-line": true,
+    "block-opening-brace-newline-after": "always",
+    "block-opening-brace-space-before": "always",
+    "selector-attribute-brackets-space-inside": "never",
+    "selector-attribute-operator-space-after": "never",
+    "selector-attribute-operator-space-before": "never",
+    "selector-combinator-space-after": "always",
+    "selector-combinator-space-before": "always",
+    "selector-max-compound-selectors": 2,
+    "selector-no-id": true,
+    "selector-pseudo-class-case": "lower",
+    "selector-pseudo-class-no-unknown": true,
+    "selector-pseudo-class-parentheses-space-inside": "never",
+    "selector-pseudo-element-case": "lower",
+    "selector-pseudo-element-no-unknown": true,
+    "selector-type-case": "lower",
+    "selector-type-no-unknown": true,
+    "selector-max-empty-lines": 0,
+    "selector-list-comma-newline-after": "always",
+    "rule-nested-empty-line-before": "always",
+    "rule-non-nested-empty-line-before": "always",
+    "media-feature-colon-space-after": "always",
+    "media-feature-no-missing-punctuation": true,
+    "at-rule-empty-line-before": "always",
+    "at-rule-name-case": "lower",
+    "at-rule-name-space-after": "always",
+    "at-rule-semicolon-newline-after": "always",
+    "comment-whitespace-inside": "always",
+    "comment-word-blacklist": [
+      "/.[Хх][Уу][Йй]./",
+    ],
+    "indentation": 2,
+    "max-empty-lines": 3,
+    "max-nesting-depth": 3,
+    "no-duplicate-selectors": true,
+    "no-eol-whitespace": true,
+    "no-extra-semicolons": true,
+    "no-missing-eof-newline": true,
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    }
   }
 }
