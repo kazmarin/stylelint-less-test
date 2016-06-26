@@ -69,7 +69,11 @@
     "comment-word-blacklist": [
       "/.[Хх][Уу][Йй]./",
     ],
-    "indentation": 2,
+    "indentation": [2, {
+      "except": ["value"],
+      "message": "Используй 2 пробела, блин!",
+      "severity": "warning"
+    }],
     "max-empty-lines": 3,
     "max-nesting-depth": 3,
     "no-duplicate-selectors": true,
