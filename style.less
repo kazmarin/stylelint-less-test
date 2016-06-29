@@ -1,11 +1,15 @@
-/* postcss-bem-linter: define ComponentName */
+/** @define pre-pre */
 
 
 @var:                         #fff;
 
-.pre {
+.pre-pre {
   border: 1px solid #ddd;
   page-break-inside: avoid;
+
+  .js & {
+    display: block;
+  }
 
   span {
     width: @unknown-var;
@@ -18,6 +22,10 @@
   &__element {
     disprlay: blockk;
     color: @var;
+
+    .js & {
+      display: block;
+    }
   }
 
   &--mods {

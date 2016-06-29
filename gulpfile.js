@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 const gulpStylelint = require('gulp-stylelint');
 
-gulp.task('lint:less', function () {
+gulp.task('less:lint', function () {
   return gulp.src('style.less')
     .pipe(gulpStylelint({
       failAfterError: true,
