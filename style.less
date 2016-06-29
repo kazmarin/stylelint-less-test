@@ -1,7 +1,9 @@
+/* postcss-bem-linter: define ComponentName */
+
+
 @var:                         #fff;
 
-pre,
-blockquote {
+.pre {
   border: 1px solid #ddd;
   page-break-inside: avoid;
 
@@ -9,15 +11,31 @@ blockquote {
     width: @unknown-var;
   }
 
+  .looo {
+    color: #000;
+  }
+
   &__element {
-     disprlay: blockk;
+    disprlay: blockk;
     color: @var;
+  }
+
+  &--mods {
+    display: none;
+  }
+
+  .pre__elem {
+    linter: fuck;
   }
 }
 
 // test
 
 span {
+  disprlay: blockk;
+}
+
+.span {
   disprlay: blockk;
 }
 
