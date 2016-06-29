@@ -1,6 +1,10 @@
 {
   "syntax": "less",
+  "plugins": [
+    "stylelint-declaration-use-variable"
+  ],
   "rules": {
+    "declaration-use-variable": [["/color/", "z-index", "font-size"]],
     "color-hex-case": "lower",
     "color-named": "never",
     "color-no-invalid-hex": true,

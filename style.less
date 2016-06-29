@@ -2,10 +2,12 @@
 
 
 @var:                         #fff;
+@var2:                        #000;
 
 .pre-pre {
   border: 1px solid #ddd;
   page-break-inside: avoid;
+  z-index: 89;
 
   .js & {
     display: block;
@@ -17,11 +19,13 @@
 
   .looo {
     color: #000;
+    background-color: #ff0;
   }
 
   &__element {
     disprlay: blockk;
     color: @var;
+    font-size: 24px;
 
     .js & {
       display: block;
