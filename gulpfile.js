@@ -1,14 +1,18 @@
 'use strict';
 
 const gulp = require('gulp');
-const postcss = require('gulp-postcss');
-const reporter = require("postcss-reporter");
-const stylelint = require("stylelint");
+const gulpStylelint = require('gulp-stylelint');
 
 gulp.task('lint:less', function () {
   return gulp.src('style.less')
-    .pipe(postcss([
-        stylelint(),
-        reporter({clearMessages: true})
-    ]));
+    .pipe(gulpStylelint({
+      failAfterError: true,
+      syntax: 'less',
+      reporters: [
+        {
+          formatter: 'string',
+          console: true
+        }
+      ]
+    }));
 });

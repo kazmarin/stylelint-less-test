@@ -1,8 +1,6 @@
 {
   "syntax": "less",
-  "plugins": [
-    "stylelint-selector-bem-pattern"
-  ],
+  "severity": "error",
   "rules": {
     "color-hex-case": "lower",
     "color-named": "never",
@@ -66,27 +64,17 @@
     "at-rule-name-space-after": "always",
     "at-rule-semicolon-newline-after": "always",
     "comment-whitespace-inside": "always",
-    "comment-word-blacklist": [
-      "/.[Хх][Уу][Йй]./",
-    ],
+    "comment-word-blacklist": [ "/.[Хх][Уу][Йй]./", {
+      "message": "Без хуйни!"
+    }],
     "indentation": [2, {
-      "except": ["value"],
-      "message": "Используй 2 пробела, блин!",
-      "severity": "warning"
+      "message": "Используй 2 пробела, блин!"
     }],
     "max-empty-lines": 3,
     "max-nesting-depth": 3,
     "no-duplicate-selectors": true,
     "no-eol-whitespace": true,
     "no-extra-semicolons": true,
-    "no-missing-eof-newline": true,
-    "plugin/selector-bem-pattern": {
-      "componentName": "[A-Z]+",
-      "componentSelectors": {
-        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
-        "combined": "^\\.combined-{componentName}-[a-z]+$"
-      },
-      "utilitySelectors": "^\\.util-[a-z]+$"
-    }
+    "no-missing-eof-newline": true
   }
 }
