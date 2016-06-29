@@ -1,6 +1,9 @@
 {
   "syntax": "less",
   "severity": "error",
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
   "rules": {
     "color-hex-case": "lower",
     "color-named": "never",
@@ -75,6 +78,14 @@
     "no-duplicate-selectors": true,
     "no-eol-whitespace": true,
     "no-extra-semicolons": true,
-    "no-missing-eof-newline": true
+    "no-missing-eof-newline": true,
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    }
   }
 }

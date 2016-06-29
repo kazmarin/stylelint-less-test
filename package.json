@@ -13,6 +13,7 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-stylelint": "^2.0.2"
+    "gulp-stylelint": "^2.0.2",
+    "stylelint-selector-bem-pattern": "^1.0.0"
   }
 }
