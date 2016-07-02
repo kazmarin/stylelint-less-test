@@ -1,3 +1,3 @@
 `npm i`
 
-`npm start lint:less` for start linter
+`npm start less:lint` for start linter
