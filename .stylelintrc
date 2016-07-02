@@ -4,33 +4,77 @@
     "stylelint-declaration-use-variable"
   ],
   "rules": {
-    "declaration-use-variable": [["/color/", "z-index", "font-size"]],
-    "color-hex-case": "lower",
-    "color-named": "never",
-    "color-no-invalid-hex": true,
-    "font-family-name-quotes": "always-where-recommended",
-    "font-weight-notation": "numeric",
-    "function-calc-no-unspaced-operator": true,
-    "function-comma-newline-after": "never-multi-line",
-    "function-comma-space-after": "always",
-    "function-linear-gradient-no-nonstandard-direction": true,
-    "function-name-case": "lower",
-    "number-leading-zero": "always",
-    "string-quotes": "single",
-    "length-zero-no-unit": true,
-    "unit-case": "lower",
-    "unit-no-unknown": true,
-    "value-keyword-case": "lower",
-    "value-list-comma-newline-after": "never-multi-line",
-    "value-list-comma-space-after": "always",
-    "shorthand-property-no-redundant-values": true,
-    "property-case": "lower",
+    "sh-waqar/declaration-use-variable": [["z-index", "font-size"], {
+      "message": "В свойстве этом переменная быть должна"
+    }],
+    "color-hex-case": ["lower", {
+      "message": "HEX цвета буквами строчными указывать следует"
+    }],
+    "color-named": ["never", {
+      "message": "Цвета ключевыми нельзя словами писать"
+    }],
+    "color-no-invalid-hex": [true, {
+      "message": "HEX цвета правильно написаны быть должны"
+    }],
+    "font-family-name-quotes": ["always-where-recommended", {
+      "message": "В кавычки шрифта название брать следует"
+    }],
+    "font-weight-notation": ["numeric", {
+      "message": "Шрифта плотность цифрой указать должен ты"
+    }],
+    "function-calc-no-unspaced-operator": [true, {
+      "message": "Для calc пробелы вокруг операторов необходимы"
+    }],
+    "function-comma-newline-after": ["never-multi-line", {
+      "message": "Для функций аргументы переноса строки не должны содержать"
+    }],
+    "function-comma-space-after": ["always", {
+      "message": "В функциях запятой после пробел необходим"
+    }],
+    "function-linear-gradient-no-nonstandard-direction": [true, {
+      "message": "Градиентов синтаксис стандартным быть должен"
+    }],
+    "function-name-case": ["lower", {
+      "message": "Функций имена строчными буквами набраны быть должны"
+    }],
+    "number-leading-zero": ["always", {
+      "message": "Нуль перед точкой явно указать следует"
+    }],
+    "string-quotes": ["single", {
+      "message": "Кавычки одиночные в стилях на проекте у нас"
+    }],
+    "length-zero-no-unit": [true, {
+      "message": "Нулю не нужны измерения единицы"
+    }],
+    "unit-case": ["lower", {
+      "message": "Измерения единицы буквами строчными писать следует"
+    }],
+    "unit-no-unknown": [true, {
+      "message": "Отсутствуют измерения единицы такие в CSS"
+    }],
+    "value-keyword-case": ["lower", {
+      "message": "Свойств значение буквами строчными быть должны"
+    }],
+    "value-list-comma-newline-after": ["never-multi-line", {
+      "message": "Свойств значения переносов иметь не должны"
+    }],
+    "value-list-comma-space-after": ["always", {
+      "message": "В значениях запятой после пробел необходим"
+    }],
+    "shorthand-property-no-redundant-values": [true, {
+      "message": "Для мнемоник значения повторять не следует"
+    }],
+    "property-case": ["lower, {
+      "message": "Свойств значение буквами строчными указывать следует"
+    }]",
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-colon-space-after": "always",
     "declaration-colon-space-before": "never",
-    "declaration-no-important": true,
+    "declaration-no-important": [true, {
+      "message": "Important ситхи ленивые используют лишь"
+    }],
     "declaration-block-no-duplicate-properties": true,
     "declaration-block-no-ignored-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,
@@ -71,7 +115,7 @@
       "message": "Без хуйни!"
     }],
     "indentation": [2, {
-      "message": "Используй 2 пробела, блин!"
+      "message": "Использовать пробела два должен ты"
     }],
     "max-empty-lines": 3,
     "max-nesting-depth": 3,
