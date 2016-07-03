@@ -67,11 +67,21 @@
     "property-case": ["lower", {
       "message": "Свойств значение буквами строчными указывать следует"
     }],
-    "declaration-bang-space-after": "never",
-    "declaration-bang-space-before": "always",
-    "declaration-colon-newline-after": "always-multi-line",
-    "declaration-colon-space-after": "always",
-    "declaration-colon-space-before": "never",
+    "declaration-bang-space-after": ["never", {
+      "message": "После знака восклицательного пробел убрать следует"
+    }],
+    "declaration-bang-space-before": ["always", {
+      "message": "Перед знаком восклицательным пробел оставить хочешь ты"
+    }],
+    "declaration-colon-newline-after": ["always-multi-line", {
+      "message": "Для свойств множественных каждое — на строке свой быть должно"
+    }],
+    "declaration-colon-space-after": ["always", {
+      "message": "Правило задавая, пробел после двоеточия ставь"
+    }],
+    "declaration-colon-space-before": ["never", {
+      "message": "Правило задавая, пробел перед двоеточием не используй"
+    }],
     "declaration-no-important": [true, {
       "message": "Important ситхи ленивые используют лишь"
     }],
@@ -81,14 +91,18 @@
     "declaration-block-no-ignored-properties": [true, {
       "message": "Правило это перебито ниже"
     }],
-    "declaration-block-no-shorthand-property-overrides": true,
+    "declaration-block-no-shorthand-property-overrides": [true, {
+      "message": "Свойство это неочевидно перебивает другое для селектора этого"
+    }],
     "declaration-block-semicolon-newline-after": ["always", {
       "message": "После точки с запятой строки перенос необходим"
     }],
     "declaration-block-single-line-max-declarations": [1, {
       "message": "На строке одной правилу одному место есть только"
     }],
-    "declaration-block-trailing-semicolon": "always",
+    "declaration-block-trailing-semicolon": ["always", {
+      "message": "Свойство каждое точкой с запятой заканчивать хочешь ты"
+    }],
     "block-closing-brace-newline-after": ["always", {
       "message": "После «}» переносу строки быть должно"
     }],
@@ -119,7 +133,9 @@
     "selector-combinator-space-before": ["always", {
       "message": "Перед комбинатором в селекторе пробел нужен"
     }],
-    "selector-max-compound-selectors": 2,
+    "selector-max-compound-selectors": [3, {
+      "message": "Селектор более чем 3-составной не хочешь ты"
+    }],
     "selector-no-id": [true, {
       "message": "По ID джедай стилизовать не должен"
     }],
@@ -129,7 +145,9 @@
     "selector-pseudo-class-no-unknown": [true, {
       "message": "Псевдокласса такого существование сомнительно"
     }],
-    "selector-pseudo-class-parentheses-space-inside": "never",
+    "selector-pseudo-class-parentheses-space-inside": ["never", {
+      "message": "Внутри скобок в псевдоселекторах пробелы ставить не следует"
+    }],
     "selector-pseudo-element-case": ["lower", {
       "message": "Псевдоэлементы набирать буквами строчными надо"
     }],
@@ -172,7 +190,6 @@
     "at-rule-semicolon-newline-after": ["always", {
       "message": "В @-правилах после ; новая строка быть должна"
     }],
-    "comment-whitespace-inside": "always",
     "comment-word-blacklist": [ "/(Хуй|хуй|Хуе|хуе|Хуё|хуё|Бляд|бляд)/", {
       "message": "Комментарий хуёвый, при себе оставь его"
     }],
