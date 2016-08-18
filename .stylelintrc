@@ -116,7 +116,7 @@
       "message": "После скобки фигурной строки перенос быть должен"
     }],
     "block-opening-brace-space-before": ["always", {
-      "message": "Перед скобкой фигурной пробел писать следует"
+      "message": "Перед скобкой фигурной пробел нужен"
     }],
     "selector-attribute-brackets-space-inside": ["never", {
       "message": "В селекторе атрибута пробел использовать не следует"
@@ -211,7 +211,7 @@
     "no-extra-semicolons": [true, {
       "message": "Две точки с запятой подряд не хочешь ты"
     }],
-    "no-missing-eof-newline": [true, {
+    "no-missing-end-of-source-newline": [true, {
       "message": "Любой файл пустой строкой заканчиваться должен"
     }],
   }
