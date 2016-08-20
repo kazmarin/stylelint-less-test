@@ -48,57 +48,136 @@
     "function-name-case": ["lower", {
       "message": "Функций имена строчными буквами набирать следует"
     }],
-    # "number-leading-zero": ["always", {
-    #   "message": "Нуль перед точкой явно указать следует"
+    # "function-parentheses-newline-inside": ["never-multi-line", {
+    #   "message": "Внутри скобок () не ставь переносы"
     # }],
-    # "string-quotes": ["single", {
-    #   "message": "Кавычки одиночные в стилях на проекте у нас"
+    # "function-url-data-uris": ["never", {
+    #   "message": "Нельзя использовать data URI"
     # }],
-    # "length-zero-no-unit": [true, {
-    #   "message": "Нулю не нужны измерения единицы"
+    # "function-url-quotes": ["always", {
+    #   "message": "Всегда нужно ставить кавычки для url"
     # }],
-    # "unit-case": ["lower", {
-    #   "message": "Измерения единицы буквами строчными надобно"
+    # "function-whitespace-after": ["always", {
+    #   "message": "Всегда нужны пробелы между функциями"
     # }],
-    # "unit-no-unknown": [true, {
-    #   "message": "Нет единиц измерения таких"
+    "number-leading-zero": ["always", {
+      "message": "Нуль перед точкой явно указать следует"
+    }],
+    "number-max-precision": [8, {
+      "message": "Максимум 8 символов после точки в десятичной дроби"
+    }],
+    "number-no-trailing-zeros": [true, {
+      "message": "Лишний (необязательный) нуль в дроби"
+    }],
+    "string-no-newline": [true, {
+      "message": "В строчных данных не должно быть переносов"
+    }],
+    "string-quotes": ["single", {
+      "message": "Кавычки одиночные в стилях на проекте у нас"
+    }],
+    "length-zero-no-unit": [true, {
+      "message": "Нулю не нужны измерения единицы"
+    }],
+    "time-no-imperceptible": [true, {
+      "message": "Время менее 100мс — нет смысла использовать"
+    }],
+    # "unit-blacklist": [["px", "deg"], {
+    #   "message": "Запрещенные единицы измерения"
+    # }],
+    "unit-case": ["lower", {
+      "message": "Измерения единицы буквами строчными надобно"
+    }],
+    "unit-no-unknown": [true, {
+      "message": "Нет единиц измерения таких"
+    }],
+    # "unit-whitelist": [["rem", "ms", "deg"], {
+    #   "message": "Единицы измерения не соответствуют белому списку"
     # }],
     # "value-keyword-case": ["lower", {
     #   "message": "Свойств значение буквами строчными быть должны"
     # }],
-    # "value-list-comma-newline-after": ["never-multi-line", {
-    #   "message": "Значения свойств переносов иметь не должны"
+    "value-no-vendor-prefix": [true, {
+      "message": "Вендорные префиксы использовать не следует"
+    }],
+    "value-list-comma-newline-after": ["never-multi-line", {
+      "message": "Значения свойств переносов иметь не должны"
+    }],
+    "value-list-comma-newline-before": ["never-multi-line", {
+      "message": "Значения свойств переносов иметь не должны"
+    }],
+    "value-list-comma-space-after": ["always", {
+      "message": "В значениях после запятой пробел необходим"
+    }],
+    "value-list-comma-space-before": ["never", {
+      "message": "В значениях перед запятой пробел запрещен"
+    }],
+    "shorthand-property-no-redundant-values": [true, {
+      "message": "Для мнемоник значения повторять не следует"
+    }],
+    # "property-blacklist": [["text-rendering", "float"], {
+    #   "message": "Свойство из чёрного списка"
     # }],
-    # "value-list-comma-space-after": ["always", {
-    #   "message": "В значениях запятой после пробел необходим"
+    "property-case": ["lower", {
+      "message": "Свойств значение буквами строчными указывать следует"
+    }],
+    "property-no-unknown": [true, {
+      "message": "Такого свойства нет"
+    }],
+    "property-no-vendor-prefix": [true, {
+      "message": "Не используйте вендорные префиксы"
+    }],
+    "declaration-bang-space-after": ["never", {
+      "message": "После знака восклицательного пробел убрать следует"
+    }],
+    "declaration-bang-space-before": ["always", {
+      "message": "Перед знаком восклицательным пробел оставить хочешь ты"
+    }],
+    "declaration-colon-newline-after": ["always-multi-line", {
+      "message": "Для свойств множественных каждое — на строке свой быть должно"
+    }],
+    "declaration-colon-space-after": ["always", {
+      "message": "Правило задавая, пробел после двоеточия ставь"
+    }],
+    "declaration-colon-space-before": ["never", {
+      "message": "Правило задавая, пробел перед двоеточием не используй"
+    }],
+    "declaration-empty-line-before": ["never", {
+      "message": "Пустые строки между правилами убрать следует"
+    }],
+    "declaration-no-important": [true, {
+      "message": "!important с опаской применять следует",
+      "severity": "warning"
+    }],
+    # "declaration-property-unit-blacklist": [{
+    #   "font-size": ["em", "px"],
+    #   "/^animation/": ["s"]
+    # }, {
+    #   "message": "Для этого свойства данные единицы измерения в чёрном списке"
     # }],
-    # "shorthand-property-no-redundant-values": [true, {
-    #   "message": "Для мнемоник значения повторять не следует"
+    # "declaration-property-unit-whitelist": [{
+    #   "font-size": ["em", "px"],
+    #   "/^animation/": ["s"]
+    # }, {
+    #   "message": "Для этого свойства данные единицы измерения не в белом списке"
     # }],
-    # "property-case": ["lower", {
-    #   "message": "Свойств значение буквами строчными указывать следует"
+    # "declaration-property-value-blacklist": [{
+    #   "transform": ["/scale3d/", "/rotate3d/", "/translate3d/"],
+    #   "position": ["fixed"],
+    #   "color": ["/^green/"]
+    #   "/^animation/": ["/ease/"]
+    # }, {
+    #   "message": "Это значение данного свойства в чёрном списке"
     # }],
-    # "declaration-bang-space-after": ["never", {
-    #   "message": "После знака восклицательного пробел убрать следует"
+    # "declaration-property-value-whitelist": [{
+    #   "transform": ["/scale/"],
+    #   "whitespace": ["nowrap"],
+    #   "/color/": ["/^green/"]
+    # }, {
+    #   "message": "Это значение данного свойства отсутствует в белом списке"
     # }],
-    # "declaration-bang-space-before": ["always", {
-    #   "message": "Перед знаком восклицательным пробел оставить хочешь ты"
-    # }],
-    # "declaration-colon-newline-after": ["always-multi-line", {
-    #   "message": "Для свойств множественных каждое — на строке свой быть должно"
-    # }],
-    # "declaration-colon-space-after": ["always", {
-    #   "message": "Правило задавая, пробел после двоеточия ставь"
-    # }],
-    # "declaration-colon-space-before": ["never", {
-    #   "message": "Правило задавая, пробел перед двоеточием не используй"
-    # }],
-    # "declaration-no-important": [true, {
-    #   "message": "Important ситхи ленивые используют лишь"
-    # }],
-    # "declaration-block-no-duplicate-properties": [true, {
-    #   "message": "Правила повторять не следует"
-    # }],
+    "declaration-block-no-duplicate-properties": [true, {
+      "message": "Правила повторять не следует"
+    }],
     # "declaration-block-no-ignored-properties": [true, {
     #   "message": "Правило это перебито ниже"
     # }],
