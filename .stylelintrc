@@ -57,9 +57,9 @@
     # "function-url-quotes": ["always", {
     #   "message": "Всегда нужно ставить кавычки для url"
     # }],
-    # "function-whitespace-after": ["always", {
-    #   "message": "Всегда нужны пробелы между функциями"
-    # }],
+    "function-whitespace-after": ["always", {
+      "message": "Всегда нужны пробелы между функциями"
+    }],
     "number-leading-zero": ["always", {
       "message": "Нуль перед точкой явно указать следует"
     }],
@@ -93,9 +93,9 @@
     # "unit-whitelist": [["rem", "ms", "deg"], {
     #   "message": "Единицы измерения не соответствуют белому списку"
     # }],
-    # "value-keyword-case": ["lower", {
-    #   "message": "Свойств значение буквами строчными быть должны"
-    # }],
+    "value-keyword-case": ["lower", {
+      "message": "Свойств значение буквами строчными быть должны"
+    }],
     "value-no-vendor-prefix": [true, {
       "message": "Вендорные префиксы использовать не следует"
     }],
