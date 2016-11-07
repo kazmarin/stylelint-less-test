@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const gulpStylelint = require('gulp-stylelint');
 
 gulp.task('less:lint', function () {
-  return gulp.src(['style.less']) // ,'less/**/*.less'
+  return gulp.src(['less/**/*.less'])
     .pipe(gulpStylelint({
       failAfterError: true,
       syntax: 'less',

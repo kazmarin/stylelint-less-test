@@ -25,7 +25,8 @@
       "message": "В кавычки шрифта название брать следует"
     }],
     "font-weight-notation": ["numeric", {
-      "message": "Плотность — цифрой: https://goo.gl/58eKi7"
+      "message": "Плотность — цифрой: https://goo.gl/58eKi7",
+      ignore: ["relative"]
     }],
     # "function-blacklist": [["scale", "rgba", "linear-gradient"], {
     #   "message": "Запрещено функцию эту использовать."
@@ -93,9 +94,10 @@
     # "unit-whitelist": [["rem", "ms", "deg"], {
     #   "message": "Единицы измерения не соответствуют белому списку"
     # }],
-    "value-keyword-case": ["lower", {
-      "message": "Свойств значение буквами строчными быть должны"
-    }],
+    # Реагирует на названия шрифтов, в топку
+    # "value-keyword-case": ["lower", {
+    #   "message": "Свойств значение буквами строчными быть должны"
+    # }],
     "value-no-vendor-prefix": [true, {
       "message": "Вендорные префиксы использовать не следует"
     }],
@@ -124,7 +126,7 @@
       "message": "Такого свойства нет"
     }],
     "property-no-vendor-prefix": [true, {
-      "message": "Не используйте вендорные префиксы"
+      "message": "Вендорные префиксы тут лишние, используем Autoprefixer"
     }],
     "declaration-bang-space-after": ["never", {
       "message": "После знака восклицательного пробел убрать следует"
@@ -136,7 +138,7 @@
       "message": "Для свойств множественных каждое — на строке свой быть должно"
     }],
     "declaration-colon-space-after": ["always", {
-      "message": "Правило задавая, пробел после двоеточия ставь"
+      "message": "Правило задавая, один пробел после двоеточия ставь"
     }],
     "declaration-colon-space-before": ["never", {
       "message": "Правило задавая, пробел перед двоеточием не используй"
@@ -144,10 +146,10 @@
     "declaration-empty-line-before": ["never", {
       "message": "Пустые строки между правилами убрать следует"
     }],
-    "declaration-no-important": [true, {
-      "message": "!important с опаской применять следует",
-      "severity": "warning"
-    }],
+    # "declaration-no-important": [true, {
+    #   "message": "!important с опаской применять следует",
+    #   "severity": "warning"
+    # }],
     # "declaration-property-unit-blacklist": [{
     #   "font-size": ["em", "px"],
     #   "/^animation/": ["s"]
@@ -206,7 +208,8 @@
     #   "message": "Пустые блоки писать не следует"
     # }],
     "block-no-single-line": [true, {
-      "message": "Селекторы строкой одной писать не следует"
+      "message": "Селекторы строкой одной писать не следует",
+      "severity": "warning"
     }],
     "block-opening-brace-newline-after": ["always", {
       "message": "После «{» перенос строки быть должен"
@@ -242,7 +245,8 @@
     }],
     "selector-no-qualifying-type": [true, {
       "message": "Возможно, перенасыщенный селектор (использован селектор типа)",
-      "severity": "warning"
+      ignore: ["attribute"],
+      # "severity": "warning"
     }],
     "selector-pseudo-class-case": ["lower", {
       "message": "Псевдоклассы набирать буквами строчными надо"
@@ -277,22 +281,24 @@
     "selector-list-comma-newline-before": ["never-multi-line", {
       "message": "Перед запятой переноса строки быть не должно"
     }],
-    "selector-list-comma-space-after": ["always", {
+    "selector-list-comma-space-after": ["always-single-line", {
       "message": "После запятой пробел быть должен"
     }],
     "selector-list-comma-space-before": ["never", {
       "message": "Перед запятой пробела быть не должно"
     }],
     "rule-nested-empty-line-before": ["always", {
-      "message": "Перед селектором вложенным строку пустую оставь"
+      "message": "Перед селектором вложенным строку пустую оставь",
+      ignore: ["after-comment"]
     }],
     "rule-non-nested-empty-line-before": ["always", {
-      "message": "Между селекторами строку пустую оставь"
+      "message": "Между селекторами строку пустую оставь",
+      ignore: ["after-comment"]
     }],
     "media-feature-colon-space-after": ["always", {
       "message": "В @media после «:» пробелы необходимы"
     }],
-    "media-feature-colon-space-before": ["always", {
+    "media-feature-colon-space-before": ["never", {
       "message": "В @media перед «:» пробелов быть не должно"
     }],
     "media-feature-name-case": ["lower", {
@@ -319,7 +325,8 @@
     }],
     "at-rule-empty-line-before": ["always", {
       "message": "Перед @-правилами строку пустую оставь (кроме @import)",
-      ignoreAtRules: ["import"]
+      ignoreAtRules: ["import"],
+      ignore: ["after-comment"]
     }],
     "at-rule-name-case": ["lower", {
       "message": "@-правила буквами строчными набирать следует"
@@ -332,7 +339,7 @@
     }],
     "at-rule-no-unknown": [true, {
       "message": "Неизвестное @-правило",
-      # ignoreAtRules: ["/^my-/", "custom"]
+      ignoreAtRules: ["/^at-/"]
     }],
     "at-rule-no-vendor-prefix": [true, {
       "message": "Для @-правил вендорные префиксы использовать не следует"
@@ -342,7 +349,8 @@
     }],
     "comment-empty-line-before": ["always", {
       "message": "Перед комментом пустая строка требуется",
-      except: ["first-nested"]
+      except: ["first-nested"],
+      ignore: ["stylelint-commands"]
     }],
     "comment-no-empty": [true, {
       "message": "Пустой коммент убрать нужно"
@@ -361,7 +369,9 @@
       "message": "Максимум линий пустых допустимо — 3"
     }],
     "max-nesting-depth": [3, {
-      "message": "Вложения боле 3 уровней — на тёмную сторону путь"
+      "message": "Вложения боле 3 уровней — на тёмную сторону путь",
+      "ignore": ["at-rules-without-declaration-blocks"],
+      "severity": "warning"
     }],
     "no-browser-hacks": [true, {
       "message": "Браузерные хаки не используем мы"
