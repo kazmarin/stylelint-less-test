@@ -181,7 +181,7 @@
       "message": "Правила повторять не следует"
     }],
     "declaration-block-no-ignored-properties": [true, {
-      "message": "Правило это перебито ниже"
+      "message": "Правило это не сработает"
     }],
     "declaration-block-no-shorthand-property-overrides": [true, {
       "message": "Свойство это неочевидно перебивает другое для селектора этого"
@@ -390,6 +390,10 @@
     }],
     "no-missing-end-of-source-newline": [true, {
       "message": "Файл пустой строкой кончаться должен: https://goo.gl/Co2tZ8"
+    }],
+    "no-descending-specificity": [true, {
+      "message": "Осторожно, выше по коду есть более специфичный селектор",
+      "severity": "warning"
     }],
   }
 }
