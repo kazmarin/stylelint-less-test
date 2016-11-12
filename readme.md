@@ -14,4 +14,4 @@
 
 `npm i`
 
-`npm start less:lint` 
+`npm start` 
