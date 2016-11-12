@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "stylelint-declaration-use-variable": "^1.5.0",
-    "stylelint": "^7.5.0"
+    "stylelint": "^7.5.0",
+    "stylelint-declaration-use-variable": "^1.5.0"
   }
 }
