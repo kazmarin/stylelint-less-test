@@ -16,3 +16,7 @@ gulp.task('less:lint', function () {
       ]
     }));
 });
+
+gulp.task('default',
+  gulp.series('less:lint')
+);
