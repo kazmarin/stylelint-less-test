@@ -4,7 +4,11 @@
   "description": "",
   "scripts": {
     "test": "./node_modules/.bin/stylelint --syntax less ./less/**/*.less",
-    "precommit": "npm test"
+    "lint-staged": "lint-staged",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.less": "./node_modules/.bin/stylelint --syntax=less"
   },
   "author": "Nikolay Gromov",
   "repository": {
@@ -14,6 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "husky": "^0.11.9",
+    "lint-staged": "^3.2.1",
     "stylelint": "^7.5.0",
     "stylelint-declaration-use-variable": "^1.5.0"
   }
