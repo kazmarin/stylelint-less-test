@@ -8,7 +8,7 @@
     "stylelint-staged": "./node_modules/.bin/stylelint --syntax less"
   },
   "lint-staged": {
-    "stylelint-staged": "./less/**/*.less"
+    "*.less": "stylelint-staged"
   },
   "pre-commit": "lint-staged",
   "author": "Nikolay Gromov",
