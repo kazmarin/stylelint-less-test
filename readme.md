@@ -2,16 +2,9 @@
 
 Используется для обучения студентов.
 
-Добавить в `package.json`:
+Смотри `"precommit"` в `package.json`. На любой коммит происходит линтинг стилей.
 
-```
-"scripts": {
-  "test": "gulp less:lint",
-  "start": "gulp",
-  "precommit": "npm test"
-},
-```
+Для запуска:
 
-`npm i`
-
-`npm start less:lint` 
+- поставить зависимости: `npm i`
+- запустить тест: `npm test`
