@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "",
   "scripts": {
-    "test": "./node_modules/.bin/stylelint --syntax less ./less/**/*.less",
+    "test": "./node_modules/.bin/stylelint --syntax less './**/*.less'",
     "lint-staged": "lint-staged",
     "precommit": "lint-staged"
   },
