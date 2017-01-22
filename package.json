@@ -3,12 +3,12 @@
   "version": "2.0.0",
   "description": "",
   "scripts": {
-    "test": "./node_modules/.bin/stylelint --syntax less './**/*.less'",
+    "test": "stylelint --syntax less \"./less/**/*.less\"",
     "lint-staged": "lint-staged",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.less": "stylelint --syntax=less"
+    "./less/**/*.less": "stylelint --syntax=less"
   },
   "author": "Nikolay Gromov",
   "repository": {
