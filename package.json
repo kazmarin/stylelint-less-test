@@ -8,7 +8,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "**/*.less": "stylelint --syntax=less"
+    "*.less": "stylelint --syntax=less"
   },
   "author": "Nikolay Gromov",
   "repository": {
